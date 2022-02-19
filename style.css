@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.imgs{
+    display: none;
+}
+.font-title{
+    font-family: 'Griffy', cursive;
+}
+ul{
+    list-style: none;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(3, 151, 151,0.3);
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+.navbar a{
+    color: white !important;
+    padding: 5px !important;
+    margin-left: 10px;
+    background-color:rgb(3, 151, 151,0.4) ;
+    box-shadow: 3px 3px 3px rgba(26, 83, 83, 0.4), -3px -3px 3px rgba(26, 83, 83, 0.4);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.icon{
+    outline: 0 !important;
+    border: 0 !important;
+    color: white !important;
+    background-color:rgb(3, 151, 151,0.4) ;
+    box-shadow: 3px 3px 3px rgba(154, 199, 199, 0.4), -3px -3px 3px rgba(154, 199, 199, 0.4);
+    border-radius: 5px;
+}
+.navbar a.active{
+    background-color:teal
+}
+.navbar a:hover{
+    background-color:teal 
+}
+header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_more{
+    position: absolute;
+    color: white;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+}
+.title-job{
+    color: darkcyan;
+}
+.social{
+    position: relative;
+    width: 130px;
+    height: 45px;
+    cursor: pointer;
+}
+    .social-content{
+    width: 0;
+    height: 40px;
+    transition: all .5s;
+    background-color: violet;
+}
+    .social-content-ul{
+       opacity: 0;
+       transition: all .5s;
+}
+    
+.social-content-ul.show{
+            opacity: 1;
+}
+.social-content.show{
+        width: 100%;
+        height: 40px;
+    
+}
+.social-btn{
+    position: absolute;
+    top: 10%;
+    left: -10px;
+    background-color: rgb(228, 109, 228);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    
+}
+.social-btn-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+}
+.social-btn-content.show{
+        animation: rol 1.2s ease-in-out;
+}
+.social-btn-content.unshow{
+        animation: rol2 1.2s ease-in-out;
+}
+    
+@keyframes rol {
+        0% {
+            transform: rotate(0deg);
+        }
+    
+        100% {
+            transform: rotate(360deg);
+        }
+}
+    
+@keyframes rol2 {
+        0% {
+            transform: rotate(360deg);
+        }
+    
+        100% {
+            transform: rotate(0deg);
+        }
+}
+.servics{
+    background-color: white;
+}
+.servic-content{
+    width: 95%;
+    border: 5px solid white;
+    box-shadow: 3px 3px 3px gray, -3px -3px 3px gray;
+    border-radius: 20px;
+    
+}
+.about{
+    background-color: rgb(211, 211, 211);
+    height: auto;
+}
+.about-info{
+    border: 5px solid rgb(153, 149, 149);
+    box-shadow: 3px 3px 3px rgb(180, 180, 180),-2px -2px 3px rgb(146, 143, 143) ;
+    border-radius: 20px;
+}
+.about-img-content{
+
+}
+.about-img{
+    width: 95%;
+    border: 5px solid lightgray;
+    box-shadow: 4px 4px 3px gray,-4px -4px 3px gray;
+    border-radius: 20px;
+}
+.about-img img{
+    width: 100%;
+}
+
+.project{
+    background-color: white;
+    padding: 10px;
+    height: auto;
+}
+.project-content{
+padding: 5px;
+width: 95%;
+background-color: white;
+box-shadow: 3px 3px 3px rgb(182, 180, 180), -3px -3px 3px rgb(182, 180, 180);
+border-radius: 20px;
+}
+.btn-view{
+    background-color: white;
+    box-shadow: 3px 3px 3px rgb(182, 180, 180), -3px -3px 3px rgb(182, 180, 180);
+    border-radius: 10px ;
+    color: teal !important;
+  
+}
+.btn-view:hover{
+    
+    background-color: teal !important;
+    color: white !important;
+}
+
+.project-item{
+    height: 300px;
+}
+.contact{
+    background: linear-gradient(to bottom , rgb(13, 184, 175),rgb(185, 10, 201));
+}
+.icon-footer{
+    box-shadow: 3px 3px 3px rgb(20, 19, 19), -3px -3px 3px rgb(37, 37, 37);
+ border-radius: 10px;
+ width: 50px;
+ height: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.icon-contact{
+    background:linear-gradient(to bottom , rgb(13, 184, 175),rgb(185, 10, 201));
+    box-shadow: 3px 3px 3px rgb(119, 7, 129), -3px -3px 3px rgb(11, 89, 95);
+ border-radius: 10px;
+ width: 50px;
+ height: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
