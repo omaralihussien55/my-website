@@ -1,12 +1,28 @@
 *{
     padding: 0;
-    margin: 0;
+    margin: 0 ;
     box-sizing: border-box;
+
 }
 .imgs{
     display: none;
 }
+body{
 
+
+
+} 
+header{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+canvas{
+    width: 100%;
+    height: 100%;
+}
 ul{
     list-style: none;
 }
@@ -42,13 +58,7 @@ ul{
 .navbar a:hover{
     background-color:teal 
 }
-header{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .info_more{
     position: absolute;
@@ -158,6 +168,7 @@ header{
 }
 .about-img img{
     width: 100%;
+
 }
 
 .project{
@@ -165,31 +176,34 @@ header{
     padding: 10px;
     height: auto;
 }
-.project-content{
+.project-item{
 padding: 5px;
 width: 95%;
 background-color: white;
 box-shadow: 3px 3px 3px rgb(182, 180, 180), -3px -3px 3px rgb(182, 180, 180);
 border-radius: 20px;
 }
+.card-item{
+    height: 380px;
+}
+.project-item img{
+    height: 60%;
+    border-radius: 20px;
+}
 .btn-view{
-    background-color: white;
+    background-color: white !important;
     box-shadow: 3px 3px 3px rgb(182, 180, 180), -3px -3px 3px rgb(182, 180, 180);
-    border-radius: 10px ;
+    border-radius: 10px !important;
     color: teal !important;
-  
+    border: 0;
 }
 .btn-view:hover{
-    
     background-color: teal !important;
     color: white !important;
 }
 
-.project-item{
-    height: 300px;
-}
 .contact{
-    background: linear-gradient(to bottom , rgb(13, 184, 175),rgb(185, 10, 201));
+    background: linear-gradient(to bottom , #341f97,#2e86de);
 }
 .icon-footer{
     box-shadow: 3px 3px 3px rgb(20, 19, 19), -3px -3px 3px rgb(37, 37, 37);
@@ -201,12 +215,14 @@ border-radius: 20px;
  align-items: center;
 }
 .icon-contact{
-    background:linear-gradient(to bottom , rgb(13, 184, 175),rgb(185, 10, 201));
-    box-shadow: 3px 3px 3px rgb(119, 7, 129), -3px -3px 3px rgb(11, 89, 95);
+ background:linear-gradient(to bottom , #341f97, #2e86de);
+ box-shadow: 3px 3px 3px rgb(11, 70, 75), -3px -3px 3px rgb(11, 70, 75);
  border-radius: 10px;
  width: 50px;
  height: 50px;
  display: flex;
  justify-content: center;
  align-items: center;
+
 }
+

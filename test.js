@@ -206,7 +206,7 @@ if(move >= 360 || move <=0 ){
    }
 
 serviceContent.forEach((i)=>{
- i.style.background = `linear-gradient(${move}deg,rgb( ${move}, 12, 194) 40% ,rgb( ${move}, 223, 187) 40%)`
+ i.style.background = `linear-gradient(${move}deg,rgb( ${move}, 110, 160) 40% ,rgb( ${move}, 138, 190) 40%)`
 })
 
 requestAnimationFrame(init); 
@@ -281,7 +281,7 @@ function  Services(){
 let item = ArrayServic.map((item)=>{
    const {i,info,title,data,color1,color2,deg} = item
  return `
-   <div class="col-10 col-md-4 mx-auto mb-3 " data-aos="${data}">
+   <div class="col-10 col-sm-6 col-md-4 mx-auto mb-3 " data-aos="fade-up">
    <div class="servic-content move" style="background: linear-gradient(${deg}deg,${color1} 40% ,${color2} 40%)">
       <div class="d-flex mb-3">
         <i class="${i}"></i>
@@ -350,16 +350,13 @@ function project(){
 let items = ArrayProject.map((item)=>{
 const {photo,title,info,link,data} = item
 return `
+<div class="card-item col-10 col-sm-6 col-md-4 mx-md-0 mx-auto mb-3" data-aos='fade-up'>
+<div class='project-item h-100 bg-light'>
+<img src="${photo}" class="card-img-top " >
+  <h5 class="card-title text-info">${title}</h5>
+  <p class="card-text text-muted">${info}</p>
+  <a href="${link}" target="_blank" class="btn btn-primary btn-view">view site</a>
 
-<div class="col-10 col-md-4 mx-md-0 mx-auto mb-2 project-item" data-aos='fade-up'>
-<div class="project-content">
-   <div class="project-img h-50 mb-2 d-flex">
-     <img src="${photo}" class="w-75 h-100 m-auto">
-   </div>
-
-    <h5 class="mb-1 p-1 text-info font-title">${title}</h5>
-    <p class="mb-1 p-1 text-muted">${info}</p>
-    <a href="${link}" target="_blank" class="mb-2 btn btn-view">view site</a>
 </div>
 </div>
 `
@@ -369,8 +366,6 @@ document.querySelector(".project-items").innerHTML = items
 project()
 
 
-// end projects
-
 //  start about 
 let aboutBlock = document.querySelectorAll(".about-block");
 let heightArrayAbout = []
@@ -378,7 +373,7 @@ aboutBlock.forEach((i)=>{
 
     heightArrayAbout.push(i.clientHeight)
   let heightMax = Math.max(...heightArrayAbout)
-  
+  console.log(heightArrayAbout)
   i.style.height = heightMax
 })
 // end about
