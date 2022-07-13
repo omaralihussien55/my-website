@@ -254,12 +254,7 @@ socialBtn()
 // .................... end function btn social
 // start servic 
 let ArrayServic = [
-{id:1,data:'fade-right',i:'fas fa-palette fa-5x text-danger mx-auto',title:'UI/UX Design',
-info:' Designers use them to build interfaces in computerized software or hardware, with an emphasis on form or style.',
-color1:"rgb(142, 12, 194)",
-color2:"rgb(10, 183, 196)",
-deg :110
-},
+
 {id:2.,data:'fade-up',i:'fal fa-phone-laptop fa-5x m-auto text-success',title:'Responsive Site',
 info:' A site that supports all screen sizes from mobile phones to computers,',
 color1:"rgb(207, 15, 143)",
@@ -281,7 +276,7 @@ function  Services(){
 let item = ArrayServic.map((item)=>{
    const {i,info,title,data,color1,color2,deg} = item
  return `
-   <div class="col-10 col-sm-6 col-md-4 mx-auto mb-3 " data-aos="fade-up">
+   <div class="col-11  col-md-6 col-lg-4  mx-auto mx-md-0 mb-3 " data-aos="fade-up">
    <div class="servic-content move" style="background: linear-gradient(${deg}deg,${color1} 40% ,${color2} 40%)">
       <div class="d-flex mb-3">
         <i class="${i}"></i>
@@ -312,60 +307,117 @@ serviceContent.forEach((i)=>{
 
 // start projects
 let ArrayProject = [
+  {
+    select:"react-redux",
+    photo:'./img/pexels-andrea-piacquadio-3768136.jpg',title:'Guess',
+    info:'Guess your answer quickly',link:'https://omaralihussien55.github.io/redux_puzzle/',
+  },
+  
+  {
+    select:"react-redux",
+    photo:'./img/pexels-rodnae-productions-7092336.jpg',title:'Quiz App',
+    info:'A large number of questions in various fields',link:'https://omaralihussien55.github.io/redux_quiz/',
+  },
+  ,
+  
+  {  
+    select:"react-redux",
+    photo:'./img/pexels-karolina-grabowska-5625002.jpg',title:'E-commerce',
+    info:'Mobile e-commerce site',link:'https://github.com/omaralihussien55/redux-ecommerce',
+  },
 {
+  select:"",
   photo:'./img/Calculator-amico.png',title:'Calculator',
   info:'Adjust your calculations with ease',link:'https://omaralihussien55.github.io/calculator/',
 },
 {
+  select:"",
   photo:'./img/Customer Survey-bro.png',title:'Survey',
   info:'Say your opinion and win prizes',link:'https://omaralihussien55.github.io/surveys/',
 },
 {
+  select:"",
   photo:'./img/hamburger.png',title:'Healthy Food',
   info:'Say your opinion and win prizes',link:'https://omaralihussien55.github.io/healthy-food/',
 },
 {
+  select:"",
   photo:'./img/download (4).png',title:'Football Animation',
   info:'It looks like a football match',link:'https://omaralihussien55.github.io/animation-playerfootball/',
 },
 {
+  select:"",
   photo:'./img/downloadclock.png',title:'Clock',
   info:'Very beautiful wall clock',link:'https://omaralihussien55.github.io/clock/',
 },
 {
+  select:"",
   photo:'./img/date-of-birth.png',title:'birth day',
   info:'Calculate your date of birth',link:'https://omaralihussien55.github.io/brithday/',
 },
 {
+  select:"",
   photo:'./img/downloadbubble.png',title:'Bubble animation',
   info:'Enjoy the moving balls',link:'https://omaralihussien55.github.io/animation-bubble/',
 },
 {
+  select:"",
   photo:'./img/whatsapp.png',title:'Whatsapp Clone',
   info:'Simulation for WhatsApp',link:'https://omaralihussien55.github.io/whatsapp/',
 },
+// 
+
+
+{
+  select:"react",
+  photo:'./img/pexels-vanessa-loring-7869442.jpg',title:'Various projects',
+  info:'Various projects such as a photo gallery clock, etc',link:'https://omaralihussien55.github.io/templet-react/',
+},
+
+{
+  select:"react",
+  photo:'./img/pexels-pixabay-38544.jpg',title:'templet one',
+  info:'streamlined design',link:'https://omaralihussien55.github.io/templet2-react/',
+},
+
 
 ]
-function project(){
-let items = ArrayProject.map((item)=>{
+function project(array){
+let items = array.map((item)=>{
 const {photo,title,info,link,data} = item
 return `
-<div class="card-item col-10 col-sm-6 col-md-4 mx-md-0 mx-auto mb-3" data-aos='fade-up'>
-<div class='project-item h-100 bg-light'>
-<img src="${photo}" class="card-img-top " >
-  <h5 class="card-title text-info">${title}</h5>
-  <p class="card-text text-muted">${info}</p>
-  <a href="${link}" target="_blank" class="btn btn-primary btn-view">view site</a>
 
+
+<div class="card-item col-11 col-md-6 col-lg-4  mx-md-0 mx-auto mb-5" data-aos='fade-up'>
+<div class="project-item h-100 bg-light w-100 h-100 card" >
+  <img class="card-img-top" src="${photo}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title text-info">${title}</h5>
+    <p class="card-text text-muted">
+  ${info}
+    .</p>
+    <a href="${link}" target="_blank" class="btn btn-primary">view site</a>
+  </div>
 </div>
 </div>
 `
 }).join("")
 document.querySelector(".project-items").innerHTML = items
 }
-project()
+project(ArrayProject)
 
+document.querySelector(".filter-pro").onchange=function (e){
+  
+  if(e.target.value == ""){
+    project(ArrayProject)
+  }else{
+  let items = ArrayProject.filter((i)=>{
+    return i.select == e.target.value
+  })
 
+  project(items)
+}
+}
 //  start about 
 let aboutBlock = document.querySelectorAll(".about-block");
 let heightArrayAbout = []
