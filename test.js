@@ -325,6 +325,11 @@ let ArrayProject = [
     photo:'./img/pexels-karolina-grabowska-5625002.jpg',title:'E-commerce',
     info:'Mobile e-commerce site',link:'https://omaralihussien55.github.io/redux-ecommerce/',
   },
+  {
+    select:"",
+    photo:'./img/2002616.png',title:'Game Chicken',
+    info:'Collect as many eggs as possible',link:'https://omaralihussien55.github.io/game-chicken/',
+  },
 {
   select:"",
   photo:'./img/Calculator-amico.png',title:'Calculator',
