@@ -323,7 +323,7 @@ let ArrayProject = [
   {  
     select:"react-redux",
     photo:'./img/pexels-karolina-grabowska-5625002.jpg',title:'E-commerce',
-    info:'Mobile e-commerce site',link:'https://omaralihussien55/redux-ecommerce',
+    info:'Mobile e-commerce site',link:'https://omaralihussien55.github.io/redux-ecommerce/',
   },
 {
   select:"",
