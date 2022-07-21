@@ -312,14 +312,11 @@ let ArrayProject = [
     photo:'./img/pexels-andrea-piacquadio-3768136.jpg',title:'Guess',
     info:'Guess your answer quickly',link:'https://omaralihussien55.github.io/redux_puzzle/',
   },
-  
   {
     select:"react-redux",
     photo:'./img/pexels-rodnae-productions-7092336.jpg',title:'Quiz App',
     info:'A large number of questions in various fields',link:'https://omaralihussien55.github.io/redux_quiz/',
   },
-  ,
-  
   {  
     select:"react-redux",
     photo:'./img/pexels-karolina-grabowska-5625002.jpg',title:'E-commerce',
@@ -334,6 +331,11 @@ let ArrayProject = [
   select:"",
   photo:'./img/Calculator-amico.png',title:'Calculator',
   info:'Adjust your calculations with ease',link:'https://omaralihussien55.github.io/calculator/',
+},
+{
+select:"react",
+photo:'./img/pineapple.jpg',title:'Freee',
+info:'free templates ',link:'https://omaralihussien55.github.io/react-freeez/',
 },
 {
   select:"",
@@ -464,5 +466,5 @@ document.querySelectorAll(".block").forEach((i)=>{
 
 
 AOS.init();
-
+console.log(6 + 3 + "3")
 
