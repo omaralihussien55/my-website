@@ -308,66 +308,91 @@ serviceContent.forEach((i)=>{
 // start projects
 let ArrayProject = [
   {
+    api:"",
     select:"react-redux",
     photo:'./img/pexels-andrea-piacquadio-3768136.jpg',title:'Guess',
     info:'Guess your answer quickly',link:'https://omaralihussien55.github.io/redux_puzzle/',
   },
   {
+    api:"api",
     select:"react-redux",
     photo:'./img/pexels-rodnae-productions-7092336.jpg',title:'Quiz App',
     info:'A large number of questions in various fields',link:'https://omaralihussien55.github.io/redux_quiz/',
   },
   {  
+    api:"",
     select:"react-redux",
     photo:'./img/pexels-karolina-grabowska-5625002.jpg',title:'E-commerce',
     info:'Mobile e-commerce site',link:'https://omaralihussien55.github.io/redux-ecommerce/',
   },
   {
+    api:"api",
+    select:"react-redux",
+    photo:'./img/wikipedia.png',title:'Wikipedia',
+    info:'search in wikipedia',link:'https://omaralihussien55.github.io/redux-search-wikipedia/',
+  },
+{
+  api:"api",
+  select:"react-redux",
+  photo:'./img/university.png',title:'Universities',
+  info:'Directory of universities around the world',link:'https://omaralihussien55.github.io/redux-universities-around-the-world/',
+},
+  {
+    api:"",
     select:"",
     photo:'./img/2002616.png',title:'Game Chicken',
     info:'Collect as many eggs as possible',link:'https://omaralihussien55.github.io/game-chicken/',
   },
 {
+  api:"",
   select:"",
   photo:'./img/Calculator-amico.png',title:'Calculator',
   info:'Adjust your calculations with ease',link:'https://omaralihussien55.github.io/calculator/',
 },
 {
+  api:"",
 select:"react",
 photo:'./img/pineapple.jpg',title:'Freee',
 info:'free templates ',link:'https://omaralihussien55.github.io/react-freeez/',
 },
 {
+  api:"",
   select:"",
   photo:'./img/Customer Survey-bro.png',title:'Survey',
   info:'Say your opinion and win prizes',link:'https://omaralihussien55.github.io/surveys/',
 },
 {
+  api:"",
   select:"",
   photo:'./img/hamburger.png',title:'Healthy Food',
   info:'Say your opinion and win prizes',link:'https://omaralihussien55.github.io/healthy-food/',
 },
 {
+  api:"",
   select:"",
   photo:'./img/download (4).png',title:'Football Animation',
   info:'It looks like a football match',link:'https://omaralihussien55.github.io/animation-playerfootball/',
 },
 {
+  api:"",
   select:"",
   photo:'./img/downloadclock.png',title:'Clock',
   info:'Very beautiful wall clock',link:'https://omaralihussien55.github.io/clock/',
 },
 {
+  api:"",
   select:"",
   photo:'./img/date-of-birth.png',title:'birth day',
   info:'Calculate your date of birth',link:'https://omaralihussien55.github.io/brithday/',
 },
 {
+  api:"",
   select:"",
   photo:'./img/downloadbubble.png',title:'Bubble animation',
   info:'Enjoy the moving balls',link:'https://omaralihussien55.github.io/animation-bubble/',
 },
 {
+  api:"",
   select:"",
   photo:'./img/whatsapp.png',title:'Whatsapp Clone',
   info:'Simulation for WhatsApp',link:'https://omaralihussien55.github.io/whatsapp/',
@@ -376,12 +401,14 @@ info:'free templates ',link:'https://omaralihussien55.github.io/react-freeez/',
 
 
 {
+  api:"",
   select:"react",
   photo:'./img/pexels-vanessa-loring-7869442.jpg',title:'Various projects',
   info:'Various projects such as a photo gallery clock, etc',link:'https://omaralihussien55.github.io/templet-react/',
 },
 
 {
+  api:"",
   select:"react",
   photo:'./img/pexels-pixabay-38544.jpg',title:'templet one',
   info:'streamlined design',link:'https://omaralihussien55.github.io/templet2-react/',
@@ -417,11 +444,16 @@ document.querySelector(".filter-pro").onchange=function (e){
   
   if(e.target.value == ""){
     project(ArrayProject)
-  }else{
+  }else if(e.target.value=="api"){
+  let item = ArrayProject.filter((i)=>{
+    return i.api == e.target.value
+  })
+
+  project(item)
+}else{
   let items = ArrayProject.filter((i)=>{
     return i.select == e.target.value
   })
-
   project(items)
 }
 }
