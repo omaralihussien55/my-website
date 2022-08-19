@@ -307,11 +307,18 @@ serviceContent.forEach((i)=>{
 
 // start projects
 let ArrayProject = [
+
   {
     api:"",
     select:"react-redux",
     photo:'./img/pexels-andrea-piacquadio-3768136.jpg',title:'Guess',
     info:'Guess your answer quickly',link:'https://omaralihussien55.github.io/redux_puzzle/',
+  },
+  {
+    api:"api",
+    select:"react-redux",
+    photo:'./img/tr.jpg',title:'translation',
+    info:'Translation from En to more than one language',link:'https://omaralihussien55.github.io/redux_translation/',
   },
   {
     api:"api",
