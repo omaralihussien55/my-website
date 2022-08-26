@@ -307,8 +307,16 @@ serviceContent.forEach((i)=>{
 
 // start projects
 let ArrayProject = [
+  {
+
+    api:"",
+    select:"react",
+    photo:'./img/face.png',title:'facebook',
+    info:'facebook clone',link:'https://omaralihussien55.github.io/react-facebook-clone/',
+  },
 
   {
+
     api:"",
     select:"react-redux",
     photo:'./img/pexels-andrea-piacquadio-3768136.jpg',title:'Guess',
